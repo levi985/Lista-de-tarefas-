@@ -1,51 +1,57 @@
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0D1117, #0A0C10);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #2C2F33;
-    color: #FFFFFF;
-    margin: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
-    background-color: #23272A;
+    text-align: center;
     padding: 20px;
+    background-color: #23272A;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 input {
     padding: 10px;
-    margin-bottom: 10px;
-    width: calc(100% - 22px);
-    border: 1px solid #99AAB5;
+    font-size: 16px;
+    border: none;
     border-radius: 5px;
-    background-color: #2C2F33;
-    color: #FFFFFF;
+    margin-bottom: 10px;
+    width: 80%;
 }
 
 button {
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     background-color: #7289DA;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 button:hover {
     background-color: #5A6FB1;
+    transform: scale(1.05);
 }
 
 ul {
@@ -55,24 +61,26 @@ ul {
 
 li {
     padding: 10px;
-    border-bottom: 1px solid #99AAB5;
+    background-color: #2C2F33;
+    border-radius: 5px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-li.completed {
-    text-decoration: line-through;
-    color: #99AAB5;
+    word-wrap: break-word; 
 }
 
 li button {
-    background: none;
+    background-color: #f04747;
+    padding: 5px 10px;
     border: none;
-    color: #7289DA;
+    border-radius: 3px;
     cursor: pointer;
+    color: white;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 li button:hover {
-    color: #99AAB5;
+    background-color: #d73636;
+    transform: scale(1.05);
 }
